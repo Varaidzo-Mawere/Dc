@@ -1,0 +1,3427 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: kun;
+  src: url(../fonts/AktivGroteskCorp-Regular.eot);
+}
+
+
+.mobile{
+  position: absolute;
+  z-index: 99;
+  height: 5vh;
+  
+  .hamburger {
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    position: relative;
+    padding-top: 10px;
+   
+  
+  }
+  .logo{
+    position: absolute;
+    top: -1%;
+    width: 50%;
+   left: 40%;
+  }
+}
+
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  margin: 5px 0px;
+  transition: 0.4s;
+  z-index: 99;
+
+}
+
+.hamburger.is-active:before {
+  transform: rotate(
+    -45deg) translate(-2px, 8px);
+
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-3px, -10px);
+
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+  overflow: hidden;
+}
+
+
+
+.mobile-nav {
+  
+display: block;
+position: fixed;
+top: 10;
+right: 100%;
+width: 100%;
+min-height: 30vh;
+z-index: 1;
+background-color:  #E8DFCE;
+transition: 0.5s;
+
+ul {
+  text-align: center;
+ 
+
+  li {
+    a {
+      display: block;
+      text-align: center;
+      color: #000;
+      margin-bottom: 10px;
+      margin-top: 24px;
+      padding: 5 px;
+      background-color: #E8DFCE;
+      font-size: 20px;
+      font-family:AktivGroteskCorp-Regular;
+    }
+
+    a:hover {
+      background-color: #E8DFCE;
+    }
+  }
+}
+
+
+
+}
+.mobile-nav.is-active{
+right: 0;
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+  background-image: url(../images/banner.png);
+  height: 45vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+
+
+  nav {
+   display: none;
+    padding: 5px 20px;
+
+
+    .menu {
+     
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      .logo {
+        width: 65%;
+      }
+
+      .item {
+
+        display: flex;
+        margin-right: 100px;
+
+        a {
+
+          color: black;
+          font-size: 20px;
+          font-family:AktivGroteskCorp-Regular;
+
+        }
+      }
+    }
+  }
+
+  .banner-text {
+    position: absolute;
+    margin-left: 40px;
+    top: 5%;
+    font-family:AktivGroteskCorp-Regular;
+
+
+    h1 {
+      font-size: 25px;
+      padding-top: 30px;
+
+
+      span {
+        display: block;
+
+      }
+    }
+  }
+
+  .banner-image {
+   
+    position: absolute;
+    left: 5%;
+    top: 44%;
+    
+  }
+  .image-overlay{
+    width: 100%;
+   
+  }
+
+}
+
+
+
+
+
+
+.Aboout-us {
+  padding-top: 150px;
+  padding-bottom: 20px;
+  font-family:AktivGroteskCorp-Regular;
+
+  .about-text {
+    padding-left: 0px;
+    white-space: pre-line;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 25px;
+      margin-top: -58px;
+    }
+  }
+}
+
+
+
+
+
+.our-values {
+  background-color: #E8DFCE;
+  padding-top: 50px;
+  font-family:AktivGroteskCorp-Regular;
+
+  .values-text {
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .Good-vibes {
+    text-align: center;
+
+    .Good-vibes-image {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      padding-bottom: 20px
+
+
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+    }
+  }
+
+  .Honesty {
+    text-align: center;
+
+    .Honesty-image {
+      padding-top: 40px;
+      padding-bottom: 20px;
+     
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      padding-bottom: 20px
+
+    }
+
+    p {
+
+      white-space: pre-line;
+      font-size: 20px;
+    }
+  }
+
+
+
+
+  .Value {
+    text-align: center;
+
+    .Honesty-image {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+
+      white-space: pre-line;
+      font-size: 20px;
+    }
+  }
+
+
+  .Parterneship {
+    text-align: center;
+
+    .Partnership-image {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+    }
+  }
+
+
+}
+
+.Debut {
+  padding-top: 20px;
+  font-family:AktivGroteskCorp-Regular;
+
+  .debut-text {
+    h2 {
+    
+      font-size: 40px;
+      font-weight: 400;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+      margin-bottom: 30px;
+    }
+  }
+
+  .debut-btn {
+    
+
+    button {
+      width: 200px;
+      height: 60px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      margin-bottom: 30px;
+
+    }
+
+  }
+
+  .Debut-profile1 {
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
+    img{
+      padding-bottom: 50px;
+    }
+  }
+
+  .Debut-profile2 {
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+      padding-top: 10px;
+    }
+    img{
+      padding-bottom: 50px;
+    }
+  }
+
+
+  .Debut-profile3 {
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+      padding-top: 10px;
+    }
+    img{
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+
+
+.Portifolio {
+  padding-top: 40px;
+  font-family:AktivGroteskCorp-Regular;
+
+  .portifolio-text {
+    text-align: center;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 25px;
+      white-space: pre-line;
+    }
+  }
+
+  .ethels {
+    padding-top: 30px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 25px;
+      white-space: pre-line;
+      padding-bottom: 20px;
+    }
+
+    a {
+      color: black;
+      font-size: 25px;
+
+
+    }
+  }
+  .ethel-image{
+    width: 100%;
+  }
+}
+
+
+.Get-In-Touch{
+  background-image: url(../images/Path.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  font-family:AktivGroteskCorp-Regular;
+ .Get-In_touch-text{
+   padding-top: 70px;
+   h2 {
+          font-size: 20px;
+          font-weight: 400;
+          padding-bottom: 25px;
+        }
+    
+        p {
+          font-size: 18px;
+          padding-bottom: 5px;
+       
+    
+        }
+    
+        button {
+          width: 150px;
+          height: 60px;
+          background-color: black;
+          color: white;
+          border-radius: 5px;
+          font-size: 20px;
+          border: none;
+          outline: none;
+        
+         
+        }
+    
+ }
+ .image2{
+  width: 105%;
+   
+  
+ }
+
+}
+
+
+
+footer{
+  background-color: #262626;
+  padding-left: 0px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family:AktivGroteskCorp-Regular;
+ 
+  .company-infor{
+   
+    p{
+      
+      color: white;
+      font-size: 20px;
+      white-space: pre-line;
+    }
+    .social-icons{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      i{
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .circle-icon {
+        background: white;
+        padding:20px;
+        border-radius: 50%;
+    }
+    }
+   
+  }
+
+  .location{
+   
+    h2{
+     
+      font-size: 30px;
+      font-weight: 400; 
+      color: white;
+    }
+    .loc{
+      padding-top: 40px;
+      text-align: left;
+      i{
+        padding-right: 20px;
+        padding-bottom: 40px;
+        font-size: 40px;
+        color: white;
+      }
+      p{
+        color: white;
+        font-size: 20px;
+      }
+    }
+
+    .email{
+      display: flex;
+      i{
+        padding-right: 20px;
+        padding-bottom: 40px;
+        font-size: 40px;
+        color: white;
+      }
+      p{
+        color: white;
+        font-size: 20px;
+      }
+    }
+
+    .phone{
+      display: flex;
+      i{
+        padding-right: 20px;
+        font-size: 40px;
+        color: white;
+      }
+      p{
+        color: white;
+        font-size: 20px;
+        span{
+          display: block;
+        }
+       
+       
+      }
+    }
+  }
+  .company-links{
+    h2{
+
+      font-size: 30px;
+      font-weight: 400; 
+      color: white;
+    }
+    .links{
+      .Home{
+        padding-top: 40px;
+       
+      
+        a{
+          color: white;
+          font-size: 25px;
+          padding-left: 20px;
+        }
+        i{
+          color: white;
+          font-size: 40px;
+        }
+       
+      }
+  
+      .About{
+      
+        a{
+          color: white;
+          font-size: 25px;
+          padding-left: 20px;
+        }
+        i{
+          color: white;
+          font-size: 40px;
+        }
+      }
+  
+      .Team{
+       
+        a{
+          color: white;
+          font-size: 25px;
+          padding-left: 20px;
+        }
+        i{
+          color: white;
+          font-size: 40px;
+        }
+      }
+  
+      .Portifolios{
+       
+        a{
+          color: white;
+          font-size: 25px;
+          padding-left: 20px;
+        }
+        i{
+          color: white;
+          font-size: 40px;
+        }
+      }
+      
+      .Contact{
+      
+        a{
+          color: white;
+          font-size: 25px;
+          padding-left: 20px;
+          
+        }
+        i{
+          color: white;
+          font-size: 40px;
+         
+        }
+      }
+    }
+   
+  }
+  hr{
+    margin-top: 40px;
+    display: block;
+    background-color: white;
+    border: #E8DFCE;
+    height: 0.1px;
+    width: 80%;
+  }
+  .footer-para{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  
+   
+  }
+}
+
+
+
+
+@media screen and (min-width:768px) {
+  .mobile{
+    display: none;
+  }
+  .mobile-nav{
+    display: none;
+  }
+  .banner {
+    background-image: url(../images/banner.png);
+    height: 35vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  
+  
+  
+    nav {
+      position: absolute;
+      bottom: 65%;
+     display: block;
+      padding: 5px 100px;
+  
+  
+      .menu {
+       
+        display: flex;
+  
+        justify-content: space-between;
+  
+        align-items: center;
+  
+        .logo {
+          width: 30%;
+          margin-right: 50px;
+        }
+  
+        .item {
+  
+          display: flex;
+          margin-right: 0px;
+  
+          a {
+  
+            color: black;
+            font-size: 20px;
+  
+          }
+        }
+      }
+    }
+  
+    .banner-text {
+      position: absolute;
+      margin-left: 200px;
+      top: 20%;
+    
+      h1 {
+        font-size: 40px;
+        padding-top: 20px;
+        white-space: pre-line;
+        font-weight: 400;
+  
+       
+      }
+    }
+  
+    .banner-image {
+     
+      position: absolute;
+      left: 20%;
+      top: 40%;
+      
+    }
+    .image-overlay{
+     
+      width: 100%;
+      
+     
+
+    }
+  
+  }
+  
+  
+  
+  
+ 
+  
+  .Aboout-us {
+    padding-top: 400px;
+    padding-bottom: 20px;
+  
+    .about-text {
+      padding-left: 0px;
+      white-space: pre-line;
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+  
+      h4 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        margin-top: -58px;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  .our-values {
+    background-color: #E8DFCE;
+    padding-top: 50px;
+  
+    .values-text {
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+        padding-bottom: 10px;
+      }
+  
+      p {
+        font-size: 30px;
+      }
+    }
+  
+    .Good-vibes {
+      text-align: center;
+  
+      .Good-vibes-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+      }
+    }
+  
+    .Honesty {
+      text-align: center;
+      
+      .Honesty-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+      }
+    }
+  
+  
+  
+  
+    .Value {
+      text-align: center;
+  
+      .Value-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+      }
+    }
+  
+  
+    .Parterneship {
+      text-align: center;
+  
+      .Partnership-image {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+      }
+    }
+  
+  
+  }
+  
+  .Debut {
+    padding-top: 50px;
+  
+    .debut-text {
+      h2 {
+      
+        font-size: 40px;
+        font-weight: 400;
+        padding-bottom: 40px;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        margin-bottom: 50px;
+      }
+    }
+  
+    .debut-btn {
+      margin-left: 60px;
+  
+      button {
+        width: 200px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        margin-bottom: 30px;
+  
+      }
+  
+    }
+  
+    .Debut-profile1 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      img{
+        padding-bottom: 0px;
+        padding-top: 50px;
+      }
+    }
+  
+    .Debut-profile2 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 1px;
+      }
+      img{
+        padding-bottom: 50px;
+      }
+    }
+  
+  
+    .Debut-profile3 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 10px;
+      }
+      img{
+        padding-bottom: 0px;
+        padding-top: 80px;
+      }
+    }
+  }
+  
+  
+  
+  
+  .Portifolio {
+    padding-top: 40px;
+  
+    .portifolio-text {
+      text-align: center;
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+      }
+    }
+  
+    .ethels {
+      padding-top: 20px;
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+        padding-bottom: 20px;
+      }
+  
+      a {
+        color: black;
+        font-size: 25px;
+  
+  
+      }
+    }
+    .ethel-image{
+      width: 120%;
+      position: relative;
+    }
+    .right-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      color: black;
+      font-size: 30px;
+      left: 68%;
+      top: 62%;
+      z-index: 99;
+      padding: 10px;
+     
+    }
+
+
+    .left-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      padding: 10px;
+      color: black;
+      font-size: 30px;
+      left: 75%;
+      top: 62%;
+      z-index: 99;
+    }
+  }
+  
+  
+  .Get-In-Touch{
+    background-image: url(../images/Path.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+   .Get-In_touch-text{
+     padding-top: 70px;
+     h2 {
+            font-size: 20px;
+            font-weight: 400;
+            padding-bottom: 25px;
+          }
+      
+          p {
+            font-size: 18px;
+            padding-bottom: 5px;
+         
+      
+          }
+      
+          button {
+            width: 150px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+          
+           
+          }
+      
+   }
+   .image2{
+    width: 111%;
+     
+    
+   }
+  
+  }
+  
+  
+  
+  footer{
+    background-color: #262626;
+    padding-left: 0px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+   
+    .company-infor{
+     
+      p{
+        
+        color: white;
+        font-size: 20px;
+        white-space: pre-line;
+      }
+      .social-icons{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        i{
+          color: black;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        .circle-icon {
+          background: white;
+          padding:20px;
+          border-radius: 50%;
+      }
+      }
+     
+    }
+  
+    .location{
+     
+      h2{
+       
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+        padding-top: 20px;
+      }
+      .loc{
+        padding-top: 80px;
+        text-align: left;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .email{
+        display: flex;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .phone{
+        display: flex;
+        i{
+          padding-right: 20px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+          span{
+            display: block;
+          }
+         
+         
+        }
+      }
+    }
+    .company-links{
+      padding-left: 60px;
+      h2{
+  
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+      }
+      .links{
+        .Home{
+          padding-top: 80px;
+         
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+         
+        }
+    
+        .About{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Team{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Portifolios{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+        
+        .Contact{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+            
+          }
+          i{
+            color: white;
+            font-size: 40px;
+           
+          }
+        }
+      }
+     
+    }
+    hr{
+      margin-top: 40px;
+      display: block;
+      background-color: white;
+      border: #E8DFCE;
+      height: 0.1px;
+      width: 80%;
+    }
+    .footer-para{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    
+     
+    }
+  }
+  
+  
+  
+}
+
+
+
+
+@media screen and (min-width:1024px) {
+  .mobile{
+    display: none;
+  }
+  .mobile-nav{
+    display: none;
+  }
+  .banner {
+    background-image: url(../images/banner.png);
+    height: 35vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  
+  
+  
+    nav {
+      position: absolute;
+      bottom: 75%;
+     display: block;
+      padding: 5px 100px;
+  
+  
+      .menu {
+       
+        display: flex;
+  
+        justify-content: space-between;
+  
+        align-items: center;
+  
+        .logo {
+          width: 35%;
+          margin-right: 90px;
+        }
+  
+        .item {
+  
+          display: flex;
+          margin-right: 20px;
+  
+          a {
+  
+            color: black;
+            font-size: 25px;
+  
+          }
+        }
+      }
+    }
+  
+    .banner-text {
+      position: absolute;
+      margin-left: 300px;
+      top: 25%;
+    
+      h1 {
+        font-size: 60px;
+        padding-top: 20px;
+        white-space: pre-line;
+        font-weight: 400;
+  
+       
+      }
+    }
+  
+    .banner-image {
+     
+      position: absolute;
+      left: 30%;
+      top: 55%;
+      
+    }
+    .image-overlay{
+     
+      width: 100%;
+      
+     
+
+    }
+  
+  }
+  
+  
+  
+  
+  
+  
+
+  
+  .Aboout-us {
+    padding-top: 400px;
+    padding-bottom: 20px;
+  
+    .about-text {
+      padding-left: 0px;
+      white-space: pre-line;
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+  
+      h4 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        margin-top: -58px;
+      }
+    }
+   
+  }
+  
+  
+  
+  
+  
+  .our-values {
+    background-color: #E8DFCE;
+    padding-top: 50px;
+  
+    .values-text {
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+        padding-bottom: 10px;
+      }
+  
+      p {
+        font-size: 30px;
+      }
+    }
+  
+    .Good-vibes {
+      text-align: center;
+  
+      .Good-vibes-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+        padding-bottom: 30px;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+      }
+    }
+  
+    .Honesty {
+      padding-top: 80px;
+      text-align: center;
+      
+      .Honesty-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+        padding-bottom: 30px;
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+      }
+    }
+  
+  
+  
+  
+    .Value {
+      padding-top: 80px;
+      text-align: center;
+  
+      .Value-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+      }
+    }
+  
+  
+    .Parterneship {
+      text-align: center;
+  
+      .Partnership-image {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+      }
+    }
+  
+  
+  }
+  .Debut {
+    padding-top: 50px;
+  
+    .debut-text {
+      h2 {
+      
+        font-size: 40px;
+        font-weight: 400;
+        padding-bottom: 40px;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        margin-bottom: 50px;
+      }
+    }
+  
+    .debut-btn {
+      margin-left: 60px;
+  
+      button {
+        width: 200px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        margin-bottom: 30px;
+  
+      }
+  
+    }
+  
+    .Debut-profile1 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 10px;
+        padding-bottom: 3px;
+      }
+      img{
+        padding-bottom: 0px;
+      }
+    }
+  
+    .Debut-profile2 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 1px;
+      }
+      img{
+        padding-bottom: 40px;
+      }
+    }
+  
+  
+    .Debut-profile3 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 3px;
+      }
+      img{
+        padding-bottom: 5px;
+      }
+    }
+  }
+  
+  
+  
+  
+  .Portifolio {
+    padding-top: 40px;
+  
+    .portifolio-text {
+      text-align: center;
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+      }
+    }
+  
+    .ethels {
+      padding-top: 20px;
+  
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+        padding-bottom: 20px;
+      }
+  
+      a {
+        color: black;
+        font-size: 25px;
+  
+  
+      }
+    }
+    .ethel-image{
+      width: 100%;
+      position: relative;
+    }
+    .right-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      color: black;
+      font-size: 30px;
+      left: 70%;
+      top: 73%;
+      z-index: 99;
+      padding: 10px;
+     
+    }
+
+
+    .left-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      padding: 10px;
+      color: black;
+      font-size: 30px;
+      left: 75%;
+      top: 73%;
+      z-index: 99;
+    }
+  }
+  
+  
+  .Get-In-Touch{
+    background-image: url(../images/Path.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+   .Get-In_touch-text{
+     padding-top: 100px;
+     h2 {
+            font-size: 30px;
+            font-weight: 400;
+            padding-bottom: 25px;
+          }
+      
+          p {
+            font-size: 20px;
+            padding-bottom: 15px;
+         
+      
+          }
+      
+          button {
+            width: 150px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+          
+           
+          }
+      
+   }
+   .image2{
+    width: 111%;
+     
+    
+   }
+  
+  }
+  
+  
+  
+  
+  footer{
+    background-color: #262626;
+    padding-left: 0px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+   
+    .company-infor{
+     
+      p{
+        
+        color: white;
+        font-size: 20px;
+        white-space: pre-line;
+        padding-left: 50px;
+        
+      }
+      .social-icons{
+        text-align: center ;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        padding-left: 50px;
+      
+        i{
+          color: black;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        .circle-icon {
+          background: white;
+          padding:20px;
+          border-radius: 50%;
+      }
+      }
+     
+    }
+  
+    .location{
+     
+      h2{
+       
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+        padding-top: 20px;
+      }
+      .loc{
+        padding-top: 80px;
+        text-align: left;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .email{
+        display: flex;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .phone{
+        display: flex;
+        i{
+          padding-right: 20px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+          span{
+            display: block;
+          }
+         
+         
+        }
+      }
+    }
+    .company-links{
+      padding-left: 60px;
+      h2{
+  
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+      }
+      .links{
+        .Home{
+          padding-top: 80px;
+         
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+         
+        }
+    
+        .About{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Team{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Portifolios{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+        
+        .Contact{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+            
+          }
+          i{
+            color: white;
+            font-size: 40px;
+           
+          }
+        }
+      }
+     
+    }
+    hr{
+      margin-top: 40px;
+      display: block;
+      background-color: white;
+      border: #E8DFCE;
+      height: 0.1px;
+      width: 80%;
+    }
+    .footer-para{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    
+     
+    }
+  }
+  
+  
+}
+
+
+
+
+@media screen and (min-width:1200px) {
+  .mobile{
+    display: none;
+  }
+  .mobile-nav{
+    display: none;
+  }
+  .banner {
+    background-image: url(../images/banner.png);
+    height: 88vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  
+  
+  
+    nav {
+      position: absolute;
+      bottom: 75%;
+     display: block;
+      padding: 5px 100px;
+  
+  
+      .menu {
+       
+        display: flex;
+  
+        justify-content: space-between;
+  
+        align-items: center;
+  
+        .logo {
+          width: 45%;
+          margin-right: 350px;
+        }
+  
+        .item {
+  
+          display: flex;
+          margin-right: 50px;
+  
+          a {
+  
+            color: black;
+            font-size: 23px;
+            font-family:AktivGroteskCorp-Regular ;
+  
+          }
+        }
+      }
+    }
+  
+    .banner-text {
+      position: absolute;
+      margin-left: 300px;
+      top: 30%;
+    
+      h1 {
+        font-size: 67px;
+        padding-top: 20px;
+        white-space: pre-line;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular ;
+  
+       
+      }
+    }
+  
+    .banner-image {
+     
+      position: absolute;
+      left: 30%;
+      top: 55%;
+      
+    }
+    .image-overlay{
+     
+      width: 100%;
+     
+
+    }
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  .Aboout-us {
+    padding-top: 300px;
+    padding-bottom: 20px;
+  
+    .about-text {
+      padding-left: 130px;
+      white-space: pre-line;
+  
+      h2 {
+        font-size: 60px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular ;
+      }
+  
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular ;
+        white-space: pre-line;
+      }
+  
+      p {
+        font-size: 20px;
+        margin-top: -58px;
+        font-family:AktivGroteskCorp-Regular ;
+        white-space: pre-line;
+      }
+    }
+    .about-image {
+      padding-left: 150px;
+    }
+  }
+  
+  
+  
+  
+  
+  .our-values {
+    background-color: #E8DFCE;
+    padding-top: 50px;
+  
+    .values-text {
+   padding-left: 50px;
+      h2 {
+        font-size: 60px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        font-family:AktivGroteskCorp-Regular;
+      
+      }
+  
+      p {
+        font-size: 20px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+    .Good-vibes {
+      text-align: center;
+  
+      .Good-vibes-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 41px;
+        font-weight: 400;
+        padding-bottom: 30px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+    .Honesty {
+      padding-top: 100px;
+      text-align: center;
+      
+      .Honesty-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 41px;
+        font-weight: 400;
+        padding-bottom: 30px;
+        font-family:AktivGroteskCorp-Regular;
+
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+  
+  
+  
+    .Value {
+      padding-top: 100px;
+      text-align: center;
+  
+      .Value-image {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      
+  
+      h2 {
+        font-size: 41px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+  
+        white-space: pre-line;
+        font-size: 20px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+  
+    .Parterneship {
+      text-align: center;
+  
+      .Partnership-image {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+  
+      h2 {
+        font-size: 41px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+  
+  }
+  
+  .Debut {
+    padding-top: 50px;
+  
+    .debut-text {
+      h2 {
+      
+        font-size: 60px;
+        font-weight: 400;
+        padding-bottom: 40px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        margin-bottom: 50px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+    .debut-btn {
+      margin-left: 60px;
+  
+      button {
+        width: 200px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        margin-bottom: 30px;
+  
+      }
+  
+    }
+  
+    .Debut-profile1 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+      img{
+        padding-bottom: 0px;
+      }
+    }
+  
+    .Debut-profile2 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 1px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+      img{
+        padding-bottom: 50px;
+      }
+    }
+  
+  
+    .Debut-profile3 {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 20px;
+        white-space: pre-line;
+        padding-top: 10px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+      img{
+        padding-bottom: 0px;
+        padding-top: 55px;
+      }
+    }
+  }
+  
+  
+  
+  
+  .Portifolio {
+    padding-top: 40px;
+  
+    .portifolio-text {
+      text-align: center;
+  
+      h2 {
+        font-size: 60px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+        font-family:AktivGroteskCorp-Regular;
+      }
+    }
+  
+    .ethels {
+      padding-top: 20px;
+  
+      h2 {
+        font-size: 47px;
+        font-weight: 400;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      p {
+        font-size: 25px;
+        white-space: pre-line;
+        padding-bottom: 20px;
+        font-family:AktivGroteskCorp-Regular;
+      }
+  
+      a {
+        color: black;
+        font-size: 25px;
+        font-family:AktivGroteskCorp-Regular;
+  
+  
+      }
+    }
+    .ethel-image{
+      width: 100%;
+      position: relative;
+     
+    }
+    .right-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      color: black;
+      font-size: 30px;
+      left: 74.2%;
+      top: 75%;
+      z-index: 99;
+      padding: 10px;
+     
+    }
+
+
+    .left-arrow{
+      position: absolute;
+      background-color: #E8DFCE;
+      padding: 10px;
+      color: black;
+      font-size: 30px;
+      left: 70%;
+      top: 75%;
+      z-index: 99;
+    }
+  }
+  
+  
+  // .Get-In-touch {
+  
+  //   .image1 {
+  //     position: relative;
+  //     width: 111%;
+  //     height: 100%;
+  //     img{
+        
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+      
+      
+  
+  //   }
+  
+  //   .Get-In_touch-text {
+  //     position: absolute;
+  //     top: 35%;
+  //     left: 3%;
+  
+  //     h2 {
+  //       font-size: 30px;
+  //       font-weight: 400;
+  //     }
+  
+  //     p {
+  //       font-size: 30px;
+  //       padding-bottom: 5px;
+  
+  //     }
+  
+  //     button {
+  //       width: 200px;
+  //       height: 80px;
+  //       background-color: black;
+  //       color: white;
+  //       border-radius: 5px;
+  //       font-size: 20px;
+  //       border: none;
+  //       outline: none;
+  //       margin-top: 40px;
+       
+  //     }
+  
+  //   }
+  
+  //   .image2 {
+  //     padding-top: 117px;
+      
+  //   }
+  
+  // }
+  .Get-In-Touch{
+    background-image: url(../images/Path.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+   .Get-In_touch-text{
+     padding-top: 200px;
+     h2 {
+            font-size: 48px;
+            font-weight: 400;
+            padding-bottom: 30px;
+            font-family:AktivGroteskCorp-Regular;
+          }
+      
+          p {
+            font-size: 20px;
+            padding-bottom: 30px;
+            font-family:AktivGroteskCorp-Regular;
+         
+      
+          }
+      
+          button {
+            width: 200px;
+            height: 80px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            font-family:AktivGroteskCorp-Regular;
+          
+           
+          }
+      
+   }
+   .image2{
+     width: 129%;
+     
+    
+   }
+  
+  }
+  
+  
+  footer{
+    background-color: #262626;
+    padding-left: 0px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family:AktivGroteskCorp-Regular;
+   
+    .company-infor{
+     
+      p{
+        
+        color: white;
+        font-size: 20px;
+        white-space: pre-line;
+      }
+      .social-icons{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        i{
+          color: black;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        .circle-icon {
+          background: white;
+          padding:20px;
+          border-radius: 50%;
+      }
+      }
+     
+    }
+  
+    .location{
+     
+      h2{
+       
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+        padding-top: 20px;
+      }
+      .loc{
+        padding-top: 80px;
+        text-align: left;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .email{
+        display: flex;
+        i{
+          padding-right: 20px;
+          padding-bottom: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .phone{
+        display: flex;
+        i{
+          padding-right: 20px;
+          font-size: 30px;
+          color: white;
+        }
+        p{
+          color: white;
+          font-size: 20px;
+          span{
+            display: block;
+          }
+         
+         
+        }
+      }
+    }
+    .company-links{
+      padding-left: 60px;
+      h2{
+  
+        font-size: 30px;
+        font-weight: 400; 
+        color: white;
+      }
+      .links{
+        .Home{
+          padding-top: 80px;
+         
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+         
+        }
+    
+        .About{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Team{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+    
+        .Portifolios{
+         
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+          }
+          i{
+            color: white;
+            font-size: 40px;
+          }
+        }
+        
+        .Contact{
+        
+          a{
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+            
+          }
+          i{
+            color: white;
+            font-size: 40px;
+           
+          }
+        }
+      }
+     
+    }
+    hr{
+      margin-top: 40px;
+      display: block;
+      background-color: white;
+      border: #E8DFCE;
+      height: 0.1px;
+      width: 80%;
+    }
+    .footer-para{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    
+     
+    }
+  }
+
+}
+
+// @media screen and (min-width:1200) {
+//   .banner {
+//     background-image: url(../images/banner.png);
+//     height: 80vh;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     position: relative;
+  
+  
+  
+//     nav {
+  
+//       padding: 5px 20px;
+  
+  
+//       .menu {
+//         display: flex;
+  
+//         justify-content: space-between;
+  
+//         align-items: center;
+  
+//         .logo {
+//           width: 65%;
+//         }
+  
+//         .item {
+  
+//           display: flex;
+//           margin-right: 100px;
+  
+//           a {
+  
+//             color: black;
+//             font-size: 20px;
+  
+//           }
+//         }
+//       }
+//     }
+  
+//     .banner-text {
+//       margin-left: 350px;
+  
+  
+//       h1 {
+//         font-size: 80px;
+  
+  
+//         span {
+//           display: block;
+  
+//         }
+//       }
+//     }
+  
+//     .banner-image {
+//       position: absolute;
+//       left: 30%;
+//     }
+  
+//   }
+  
+  
+  
+  
+  
+//   // .banner-overlay{
+//   //   background-color: #E8DFCE;
+//   //    position: absolute;
+//   //    height: 80vh;
+//   //    width: 100%;
+//   //    object-fit: cover;
+//   //    background-size: contain;
+//   //    opacity: 0.2;
+  
+//   // }
+  
+//   .Aboout-us {
+//     padding-top: 300px;
+//     padding-bottom: 100px;
+  
+//     .about-text {
+//       padding-left: 120px;
+//       white-space: pre-line;
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       h4 {
+//         font-size: 20px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 25px;
+//       }
+//     }
+//   }
+  
+  
+  
+  
+  
+//   .our-values {
+//     background-color: #E8DFCE;
+//     padding-top: 100px;
+  
+//     .values-text {
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//       }
+//     }
+  
+//     .Good-vibes {
+//       text-align: center;
+  
+//       .Good-vibes-image {
+//         padding-top: 20px;
+//         padding-bottom: 40px;
+//       }
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         white-space: pre-line;
+//       }
+//     }
+  
+//     .Honesty {
+//       text-align: center;
+  
+//       .Honesty-image {
+//         padding-top: 120px;
+//         padding-bottom: 40px;
+//       }
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+  
+//         white-space: pre-line;
+//         font-size: 20px;
+//       }
+//     }
+  
+  
+  
+  
+//     .Value {
+//       text-align: center;
+  
+//       .Value-image {
+//         padding-top: 120px;
+//         padding-bottom: 40px;
+//       }
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+  
+//         white-space: pre-line;
+//         font-size: 20px;
+//       }
+//     }
+  
+  
+//     .Parterneship {
+//       text-align: center;
+  
+//       .Partnership-image {
+//         padding-top: 20px;
+//         padding-bottom: 40px;
+//       }
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         white-space: pre-line;
+//       }
+//     }
+  
+  
+//   }
+  
+//   .Debut {
+//     padding-top: 100px;
+  
+//     .debut-text {
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//         padding-bottom: 30px;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         white-space: pre-line;
+//       }
+//     }
+  
+//     .debut-btn {
+//       text-align: right;
+  
+//       button {
+//         width: 200px;
+//         height: 60px;
+//         background-color: black;
+//         color: white;
+//         border-radius: 5px;
+//         font-size: 20px;
+//         border: none;
+//         outline: none;
+  
+//       }
+  
+//     }
+  
+//     .Debut-profile1 {
+//       h3 {
+//         font-size: 20px;
+//         font-weight: 500;
+//       }
+  
+//       h4 {
+//         font-size: 18px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         white-space: pre-line;
+//         padding-top: 30px;
+//         padding-bottom: 35px;
+//       }
+//     }
+  
+//     .Debut-profile2 {
+//       h3 {
+//         font-size: 20px;
+//         font-weight: 500;
+//       }
+  
+//       h4 {
+//         font-size: 18px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         white-space: pre-line;
+//         padding-top: 10px;
+//       }
+//     }
+//   }
+  
+  
+  
+  
+//   .Portifolio {
+//     padding-top: 60px;
+  
+//     .portifolio-text {
+//       text-align: center;
+  
+//       h2 {
+//         font-size: 40px;
+//       }
+  
+//       p {
+//         font-size: 25px;
+//         white-space: pre-line;
+//       }
+//     }
+  
+//     .ethels {
+//       padding-top: 150px;
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 25px;
+//         white-space: pre-line;
+//         padding-bottom: 20px;
+//       }
+  
+//       a {
+//         color: black;
+//         font-size: 25px;
+  
+  
+//       }
+//     }
+//   }
+  
+  
+//   .Get-In-touch {
+  
+//     .image1 {
+//       position: relative;
+  
+//     }
+  
+//     .Get-In_touch-text {
+//       position: absolute;
+//       top: 50%;
+//       left: 25%;
+  
+//       h2 {
+//         font-size: 40px;
+//         font-weight: 400;
+//       }
+  
+//       p {
+//         font-size: 20px;
+//         padding-bottom: 20px;
+  
+//       }
+  
+//       button {
+//         width: 200px;
+//         height: 60px;
+//         background-color: black;
+//         color: white;
+//         border-radius: 5px;
+//         font-size: 20px;
+//         border: none;
+//         outline: none;
+  
+//       }
+  
+//     }
+  
+//     .image2 {
+//       padding-top: 30px;
+//     }
+  
+//   }
+  
+  
+//   footer{
+//     background-color: #262626;
+//     padding-left: 50px;
+//     padding-top: 50px;
+   
+//     .company-infor{
+     
+//       p{
+        
+//         color: white;
+//         font-size: 25px;
+       
+//         white-space: pre-line;
+//       }
+//       .social-icons{
+//         display: flex;
+//         i{
+//           color: black;
+//           font-size: 20px;
+//           margin-right: 10px;
+//         }
+//         .circle-icon {
+//           background: white;
+//           padding:20px;
+//           border-radius: 50%;
+//       }
+//       }
+     
+//     }
+  
+//     .location{
+     
+//       h2{
+       
+//         font-size: 40px;
+//         font-weight: 400; 
+//         color: white;
+//       }
+//       .loc{
+//         padding-top: 40px;
+//         text-align: left;
+//         i{
+//           padding-right: 20px;
+//           padding-bottom: 40px;
+//           font-size: 40px;
+//           color: white;
+//         }
+//         p{
+//           color: white;
+//           font-size: 25px;
+//         }
+//       }
+  
+//       .email{
+//         display: flex;
+//         i{
+//           padding-right: 20px;
+//           padding-bottom: 40px;
+//           font-size: 40px;
+//           color: white;
+//         }
+//         p{
+//           color: white;
+//           font-size: 25px;
+//         }
+//       }
+  
+//       .phone{
+//         display: flex;
+//         i{
+//           padding-right: 20px;
+//           font-size: 40px;
+//           color: white;
+//         }
+//         p{
+//           color: white;
+//           font-size: 25px;
+//           span{
+//             display: block;
+//           }
+         
+         
+//         }
+//       }
+//     }
+//     .company-links{
+//       h2{
+        
+//         font-size: 40px;
+//         font-weight: 400; 
+//         color: white;
+//       }
+//       .Home{
+//         padding-top: 40px;
+//         padding-left: 20px;
+//         display: flex;
+//         a{
+//           color: white;
+//           font-size: 25px;
+//           padding-left: 20px;
+//         }
+//         i{
+//           color: white;
+//           font-size: 40px;
+//         }
+       
+//       }
+  
+//       .About{
+//         padding-left: 20px;
+//         a{
+//           color: white;
+//           font-size: 25px;
+//           padding-left: 20px;
+//         }
+//         i{
+//           color: white;
+//           font-size: 40px;
+//         }
+//       }
+  
+//       .Team{
+//         padding-left: 20px;
+//         a{
+//           color: white;
+//           font-size: 25px;
+//           padding-left: 20px;
+//         }
+//         i{
+//           color: white;
+//           font-size: 40px;
+//         }
+//       }
+  
+//       .Portifolios{
+//         padding-left: 20px;
+//         a{
+//           color: white;
+//           font-size: 25px;
+//           padding-left: 20px;
+//         }
+//         i{
+//           color: white;
+//           font-size: 40px;
+//         }
+//       }
+      
+//       .Contact{
+//         padding-left: 20px;
+//         a{
+//           color: white;
+//           font-size: 25px;
+//           padding-left: 20px;
+          
+//         }
+//         i{
+//           color: white;
+//           font-size: 40px;
+         
+//         }
+//       }
+//     }
+//     hr{
+//       margin-top: 40px;
+//       display: block;
+//       background-color: white;
+//       border: #E8DFCE;
+//       height: 0.1px;
+//       width: 80%;
+//     }
+//     .footer-para{
+//       color: white;
+//       font-size: 25px;
+//       text-align: right;
+//       padding-right: 100px;
+//       padding-bottom: 40px;
+    
+     
+//     }
+//   }
+  
+  
+// }
